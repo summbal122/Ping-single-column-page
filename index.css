@@ -1,0 +1,127 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --Blue-color: hsl(223, 87%, 63%);
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+html{
+  font-size: 62.5%;
+  font-family: "Libre Franklin", sans-serif;
+}
+body{
+  width:100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p{
+  color: var(--Gray);
+  font-size: 1.2rem;
+}
+input{
+  border-radius: 2rem;
+  border: .5px solid var(--Gray);
+  width: 35rem;
+  padding:  1rem 2rem;
+  font-size: 1.3rem;
+}
+input::placeholder{
+  color: var(--Gray);
+  opacity: 50%;
+}
+input:active{
+  outline: var(--Light-Red);
+}
+i{
+  color: var(--Blue-color);
+  font-size: 2rem;
+  &:hover{
+    color: var(--Very-Dark-Blue);
+  }
+}
+button{
+  background-color: var(--Blue-color);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 1.3rem 3rem;
+  font-size: 1.3rem;
+  box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.3);
+  &:hover{
+    cursor: pointer;
+    opacity: 70%;
+  }
+}
+.main-section{
+  display: flex;
+  flex-direction: column;
+  width: 70rem;
+  gap: 4rem;
+  text-align: center;
+  align-items: center;
+}
+.top-section{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.logo{
+  width: 20%;
+  margin: auto;
+}
+.top-section p:nth-child(2){
+  font-size: 3rem;
+  font-weight: 300;
+}
+.top-section p:nth-child(3){
+  color: var(--Very-Dark-Blue);
+  font-size: 1.5rem;
+}
+.highlighted-text{
+  color: var(--Very-Dark-Blue);
+  font-weight: 700;
+}
+.input-section{
+  display: flex;
+  gap: 1rem;
+}
+.dashboard-img{
+  width: 60%;
+}
+.social-section{
+  display: grid;
+  gap: 1rem;
+}
+.social-icons{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.social-section p:nth-child(2){
+  font-size: 1rem;
+  opacity: 60%;
+}
+.error-display{
+  color: var(--Light-Red);
+  font:italic;
+}
+@media (max-width:425px) {
+  html{
+    font-size: 45%;
+  }
+  .main-section{
+    gap: 9rem;
+    width: 45rem;
+  }
+  .input-section{
+    display: grid;
+  }
+  
+}
